@@ -2,10 +2,14 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
+import { LeftPanelComponent} from './left-panel.component';
+import { RightPanelComponent} from './right-panel.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LeftPanelComponent,
+    RightPanelComponent
   ],
   imports: [
     BrowserModule
