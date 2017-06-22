@@ -18,7 +18,11 @@ export class LeftPanelComponent {
 
   createForm() {
     this.informationForm = this.formBuilder.group({
-      firstName: ['', Validators.required],
+      firstName: ['', [
+                          Validators.required,
+                          Validators.minLength(4)
+                        ]
+                  ],
       lastName: '',
       address: '',
       company: ''
