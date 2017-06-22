@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'left-panel',
@@ -6,5 +7,22 @@ import { Component } from '@angular/core';
   styleUrls: ['./left-panel.component.css']
 })
 export class LeftPanelComponent {
-  title = 'Hectors app';
+
+  informationForm: FormGroup;
+
+  constructor(private formBuilder: FormBuilder) {
+    this.createForm();
+  }
+
+
+
+  createForm() {
+    this.informationForm = this.formBuilder.group({
+      firstName: ['', Validators.required],
+      lastName: '',
+      address: '',
+      company: ''
+    });
+  }
 }
+
