@@ -10,9 +10,9 @@ import {Information} from './information'
   styleUrls: ['./right-panel.component.css']
 })
 export class RightPanelComponent {
-  information:Information = new Information();
+  information:Information;
   constructor(private globalService: GlobalService) {
-    this.globalService.getById('594c69d8cb71ac082a91f13e').subscribe(
+    this.globalService.information$.subscribe(
       information => {
         this.information = information;
       }
