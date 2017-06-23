@@ -18,13 +18,13 @@ export class GlobalService {
     information$ = this.information_.asObservable();
     getById(id: string): void {
         console.log(id);
-       this.http.get(url + id)
+        this.http.get(url + id)
             .map(response => response.json().information as Information).subscribe(
-                information => {
-                    this.information_.next(information);
-                }
+            information => {
+                this.information_.next(information);
+            }
             );
-    }
+    }//get information
     create(information: Information): void {
         console.log(JSON.stringify(information));
         this.http
@@ -33,5 +33,5 @@ export class GlobalService {
             .then(res => {
                 this.getById(res.json().id)
             });
-    }
+    }//post information
 }
