@@ -27,12 +27,14 @@ export class LeftPanelComponent {
   createForm() {
     this.informationForm = this.formBuilder.group({
       firstName: ['', [
-        Validators.required,
-        Validators.minLength(4)
-      ]
-      ],
-      lastName: '',
-      address: '',
+        Validators.required
+      ]],
+      lastName: ['', [
+        Validators.required
+      ]],
+      address: ['', [
+        Validators.required
+      ]],
       company: ''
     });
   }
