@@ -20,6 +20,7 @@ const InformationSchema = mongoose.Schema({
 const Information = module.exports = mongoose.model('Information', InformationSchema);
 
 module.exports.getInformationById = function(id, callback) {
+    console.log(id);
     Information.findById(id, callback);
 }
 
