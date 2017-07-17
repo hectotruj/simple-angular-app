@@ -20,6 +20,7 @@ export class LeftPanelComponent {
     this.globalService.create(new Information(
       this.informationForm.value['firstName'],
       this.informationForm.value['lastName'],
+      this.informationForm.value['salary'],
       this.informationForm.value['address'],
       this.informationForm.value['company']));
   }
@@ -30,6 +31,9 @@ export class LeftPanelComponent {
         Validators.required
       ]],
       lastName: ['', [
+        Validators.required
+      ]],
+      salary: ['', [
         Validators.required
       ]],
       address: ['', [

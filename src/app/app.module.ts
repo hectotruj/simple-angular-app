@@ -10,12 +10,14 @@ import { LeftPanelComponent} from './left-panel.component';
 import { RightPanelComponent} from './right-panel.component';
 
 import {GlobalService} from './global.service';
+import { CalculatorComponent } from './calculator.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LeftPanelComponent,
-    RightPanelComponent
+    RightPanelComponent,
+    CalculatorComponent
   ],
   imports: [
     BrowserModule,
